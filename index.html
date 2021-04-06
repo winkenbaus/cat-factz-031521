@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href='style.css' />
-  <script src="src/index.js"></script>
-  <title>KidsMDb</title>
-</head>
-<body>
-  <h2>Movies Database</h2>
-  
-  <ul>
-    <li>
-      <h3>The Brave Little Toaster</h3>
-      <div>ID: 1</div>
-    </li>
-    <li>
-      <h3>The Princess Bride</h3>
-      <div>ID: 2</div>
-    </li>
-    <li>
-      <h3>Spirited Away</h3>
-      <div>ID: 3</div>
-    </li>
-  </ul>
+  <head>
+    <link rel="stylesheet" href='style.css' />
+    
+    <title>Cat Factz Daily</title>
+  </head>
+  <body>
+    <h2>Cat Factz Daily</h2>
+    
+    <ul>
+      <li>
+        <h3>Enter a number, 1-5, below,</h3>
+        <div></div>
+      </li>
+      <li>
+        <h3>get a free cat fact!</h3>
+        <div></div>
+      </li>
+      <li>
+        <h3></h3>
+        <div></div>
+      </li>
+    </ul>
 
-  <section>
-    <form>
-      <label for="searchByID">Search By ID</label>
-      <input id="searchByID" type="text" placeholder="Enter ID here"/>
-      <input type="submit" />
-    </form>
-  </section>
-  <section id="movieDetails">
-    <h4>Title</h4>
-    <p>Summary</p>
-  </section>
-</body>
+    <section>
+      <form>
+        <label for="getYourFact">Get Your Fact!</label>
+        <input id="getYourFact" type="text" placeholder="Cat Wisedom Awaits"/>
+        <input type="submit"></input>
+      </form>
+    </section>
+    <section id="factzListed">
+      <h4>Really Cool!</h4>
+      <ul id="yourFactz">
+
+
+        </ul>
+      <p>So Impressive!</p>
+
+    </section>
+    <script src="./src/index.js"></script>
+  </body>
 </html>
