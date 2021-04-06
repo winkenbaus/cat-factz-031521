@@ -14,11 +14,11 @@ function catFactz() {
 
 let allFactz 
 function renderFactz(data) {
-    for (let i=0; i < data.length; i++) {
-            console.log(`did you know... ${data[i]}`)
-            debugger
+    allFactz = data
+    for (let i=0; i < allFactz.length; i++) {
+            console.log(`${allFactz[i].text}`)
     }
-    return data
+    return allFactz
     // const factz1 = data[0].text
     // const factz2 = data[1].text
     // const factz3 = data[2].text
@@ -29,7 +29,6 @@ function renderFactz(data) {
     //listed.innerHTML = [factz1 , factz2, factz3, factz4, factz5]
     //allFactz = [factz1 , factz2, factz3, factz4, factz5]
 };
-renderFactz(data)
 
 function givenNumber(e) {
     e.preventDefault();
@@ -37,9 +36,9 @@ function givenNumber(e) {
     let givenFact = submitter.text
 
     if (givenFact) {
-        //is between 1-5
+        renderFactz()
     } else {
-        //ask them to try again
+        return "Try Again :)"
     }
 }
 
