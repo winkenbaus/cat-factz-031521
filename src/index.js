@@ -14,7 +14,11 @@ function catFactz() {
 
 let allFactz 
 function renderFactz(data) {
-    let mapFactz = data.text.map()
+    for (let i=0; i < data.length; i++) {
+            console.log(`did you know... ${data[i]}`)
+            debugger
+    }
+    return data
     // const factz1 = data[0].text
     // const factz2 = data[1].text
     // const factz3 = data[2].text
@@ -25,6 +29,7 @@ function renderFactz(data) {
     //listed.innerHTML = [factz1 , factz2, factz3, factz4, factz5]
     //allFactz = [factz1 , factz2, factz3, factz4, factz5]
 };
+renderFactz(data)
 
 function givenNumber(e) {
     e.preventDefault();
