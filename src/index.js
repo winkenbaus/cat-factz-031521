@@ -21,11 +21,10 @@ function renderFactz(data) {
 const listed = document.getElementById("yourFactz")
 function givenNumber(e) {
     e.preventDefault();
-    let submitter = e.submitter
-        if (submitter < 6) {
-            renderFactz()
+    let input = document.getElementById("getYourFact")
+        if (0 < input.value > 6) {
+            return allFactz
         } else {
             return "Try Again :)"
         }   
 }
-//listed.appendChild(givenNumber());
