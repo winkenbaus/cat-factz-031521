@@ -18,13 +18,13 @@ function renderFactz(data) {
     console.log(allFactz)
 };
 
-const listed = document.getElementById("yourFactz")
 function givenNumber(e) {
     e.preventDefault();
-    let input = document.getElementById("getYourFact")
-        if (0 < input.value > 6) {
-            return allFactz
+    const listed = document.getElementById("yourFactz")
+    const input = document.getElementById("getYourFact")
+        if (input.value < 6 && input.value > 0) {
+           console.log(allFactz[input.value - 1])
         } else {
-            return "Try Again :)"
+            console.log("Try Again :)")
         }   
 }
