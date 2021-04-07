@@ -15,16 +15,19 @@ function catFactz() {
 let allFactz 
 function renderFactz(data) {
     allFactz = data.map(fact => fact.text)
-    console.log(allFactz)
 };
 
 function givenNumber(e) {
     e.preventDefault();
     const listed = document.getElementById("yourFactz")
+    const factAppears = document.createElement('p')
+    document.body.appendChild(factAppears)
+    listed.appendChild(factAppears)
     const input = document.getElementById("getYourFact")
+
         if (input.value < 6 && input.value > 0) {
-           console.log(allFactz[input.value - 1])
+            factAppears.innerHTML = (allFactz[input.value - 1])
         } else {
-            console.log("Try Again :)")
-        }   
+            factAppears.innerHTML = ("Try Again :)")
+        }  
 }
