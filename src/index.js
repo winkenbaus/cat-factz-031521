@@ -18,7 +18,7 @@ function renderFactz(data) {
     for (let i=0; i < allFactz.length; i++) {
             console.log(`${allFactz[i].text}`)
     }
-    return allFactz
+    return renderFactz()
     // const factz1 = data[0].text
     // const factz2 = data[1].text
     // const factz3 = data[2].text
@@ -42,16 +42,4 @@ function givenNumber(e) {
         return "Try Again :)"
     }
 }
-
-// function givenNumber(e) {
-//     e.preventDefault();
-//     fetch(`https://cat-fact.herokuapp.com/facts/`)
-//     .then(response => response.json())
-//     .then(data => {
-//         renderFactz(data)
-//         const factz = [data[0].text]
-//         const listed = document.getElementById("yourFactz")
-//         listed.innerHTML = (factz)
-// })
-// }
-
+listed.appendChild(givenNumber())
