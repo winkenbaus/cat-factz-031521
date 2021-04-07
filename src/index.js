@@ -39,6 +39,9 @@ function givenNumber(e) {
 function clearFact(e) {
     // const click = document.getElementById("clearButton")
     // click.addEventListener('click', clearFact)
+    const clear = document.querySelector('p')
+    clear.addEventListener('click', clearFact)
+    clear.remove(clear)
     alert('You clicked me!')
-    if (e.click 
+    
 }
