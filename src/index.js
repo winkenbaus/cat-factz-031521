@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     catFactz()
-    let input = document.querySelector('form')
+    const input = document.querySelector('form')
     input.addEventListener('submit', givenNumber)
+    const click = document.getElementById("clearButton")
+    click.addEventListener('click', clearFact)
 });
 
 function catFactz() {
@@ -19,15 +21,24 @@ function renderFactz(data) {
 
 function givenNumber(e) {
     e.preventDefault();
+    const input = document.getElementById("getYourFact")
     const listed = document.getElementById("yourFactz")
     const factAppears = document.createElement('p')
     document.body.appendChild(factAppears)
     listed.appendChild(factAppears)
-    const input = document.getElementById("getYourFact")
+    
 
         if (input.value < 6 && input.value > 0) {
-            factAppears.innerHTML = (allFactz[input.value - 1])
+            factAppears.innerHTML = (allFactz[input.value - 1] + "<h4>Want more? Click below to clear and submit a new number!</h4>")
         } else {
             factAppears.innerHTML = ("Try Again :)")
-        }  
+        }
+    return (input.value = "") 
+};
+
+function clearFact(e) {
+    // const click = document.getElementById("clearButton")
+    // click.addEventListener('click', clearFact)
+    alert('You clicked me!')
+    if (e.click 
 }
