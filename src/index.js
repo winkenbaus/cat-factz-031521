@@ -25,17 +25,18 @@ function renderFactz(data) {
     // const factz4 = data[3].text
     // const factz5 = data[4].text
     
-    //const listed = document.getElementById("yourFactz")
+    //
     //listed.innerHTML = [factz1 , factz2, factz3, factz4, factz5]
     //allFactz = [factz1 , factz2, factz3, factz4, factz5]
 };
 
+const listed = document.getElementById("yourFactz")
 function givenNumber(e) {
     e.preventDefault();
     let submitter = e.submitter
-    let givenFact = submitter.text
+    //let givenFact = submitter.text
 
-    if (givenFact) {
+    if (submitter > 6) {
         renderFactz()
     } else {
         return "Try Again :)"
