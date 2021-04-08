@@ -38,11 +38,11 @@ function givenNumber(e) {
 };
 
 function clearFact(e) {
-    const clear = document.querySelector('p')
+    const clear = document.getElementById("yourFactz")
     clear.addEventListener('click', clearFact)
     clear.remove(clear)
 };
 
 function secretButton(e) {
-    alert("If you do not press clear, you can select 1, 2, 3, 4, and 5 and have them all appear at the same time!!")
+    alert("If you do not press the 'clear' button, you can select numbers 1, 2, 3, 4, and 5 and have all factz display at the same time!!")
 }
