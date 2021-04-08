@@ -1,5 +1,7 @@
 Welcome to Cat Factz Daily!
 
+To open and begin to run the page, please open this by opening index.html from the terminal. 
+
 The intent of this application is to ask the client to choose a number 1-5, and a 'Cat Fact' will be displayed according to the number selected. 
 
 Once the client is finished reading, they can click the "clear" button and it will remove the fact for them to be able to pick a new number and recieve a new fact. 

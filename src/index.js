@@ -25,7 +25,7 @@ function givenNumber(e) {
     e.preventDefault();
     const input = document.getElementById("getYourFact")
     const listed = document.getElementById("yourFactz")
-    const factAppears = document.createElement('p')
+    const factAppears = document.createElement('li'); factAppears.id = 'factz'
     document.body.appendChild(factAppears)
     listed.appendChild(factAppears)
         
@@ -39,8 +39,7 @@ function givenNumber(e) {
 
 function clearFact(e) {
     const clear = document.getElementById("yourFactz")
-    clear.addEventListener('click', clearFact)
-    clear.remove(clear)
+    clear.innerHTML = ' ';
 };
 
 function secretButton(e) {
