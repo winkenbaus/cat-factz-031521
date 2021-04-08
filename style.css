@@ -22,4 +22,12 @@ body, css {
   #factzListed {
     display: block;
   }
+
+  #secretButton{
+    background-color: grey;
+    display: block;
+    position: fixed;
+    width: 50%;
+    bottom: 10px;
+  }
   

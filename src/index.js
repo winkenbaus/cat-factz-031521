@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener('submit', givenNumber)
     const click = document.getElementById("clearButton")
     click.addEventListener('click', clearFact)
+    const secret = document.getElementById("secretButton")
+    secret.addEventListener('click', secretButton)
 });
 
 function catFactz() {
@@ -40,3 +42,7 @@ function clearFact(e) {
     clear.addEventListener('click', clearFact)
     clear.remove(clear)
 };
+
+function secretButton(e) {
+    alert("If you do not press clear, you can select 1, 2, 3, 4, and 5 and have them all appear at the same time!!")
+}
