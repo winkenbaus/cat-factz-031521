@@ -21,6 +21,7 @@ function renderFactz(data) {
     allFactz = data.map(fact => fact.text)
 };
 
+
 function givenNumber(e) {
     e.preventDefault();
     const input = document.getElementById("getYourFact")
@@ -28,13 +29,24 @@ function givenNumber(e) {
     const factAppears = document.createElement('li'); factAppears.id = 'factz'
     document.body.appendChild(factAppears)
     listed.appendChild(factAppears)
-        
-        if (input.value < 6 && input.value > 0) {
+
+    let alreadyListed = 0
+    function filterCheck(fact) {
+        if (factz[input.value -1] && factz[input.value -1] < 6){
+        return true
+    }
+    alreadyListed++
+    return false
+}
+
+        if (filterCheck(factz)) {
+            factAppears.innerHTML = ("Op! You already have that fact!")
+        } else if (input.value < 6 && input.value > 0) {
             factAppears.innerHTML = (allFactz[input.value - 1] + "<h4>Want more? Click below to clear and submit a new number!</h4>")
         } else {
             factAppears.innerHTML = ("Try Again :)")
         };
-    return (input.value = "") 
+    return (input.value = "")
 };
 
 function clearFact(e) {
