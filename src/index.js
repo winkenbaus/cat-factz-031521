@@ -27,33 +27,25 @@ function givenNumber(e) {
     const input = document.getElementById("getYourFact")
     const listed = document.getElementById("yourFactz")
     const factAppears = document.createElement('li'); factAppears.id = 'factz'
+    const checked = document.getElementById("factzListed")
     document.body.appendChild(factAppears)
     listed.appendChild(factAppears)
 
-    let alreadyListed = 0
-    function filterCheck(fact) {
-        if (factz[input.value -1] && factz[input.value -1] < 6){
-        return true
-    }
-    alreadyListed++
-    return false
-}
-
-        if (filterCheck(factz)) {
-            factAppears.innerHTML = ("Op! You already have that fact!")
+        if (input.value == 6) {
+            factAppears.innerHTML = (allFactz)
         } else if (input.value < 6 && input.value > 0) {
-            factAppears.innerHTML = (allFactz[input.value - 1] + "<h4>Want more? Click below to clear and submit a new number!</h4>")
+            factAppears.innerHTML = allFactz[input.value - 1] + "<h4>Want more? Click below to clear and submit a new number!</h4>"
         } else {
-            factAppears.innerHTML = ("Try Again :)")
+            factAppears.innerHTML = ("Op! You already have that fact! Or purrhaps the wrong number? Try Again :)")
         };
     return (input.value = "")
 };
 
 function clearFact(e) {
     const clear = document.getElementById("yourFactz")
-    clear.innerHTML = ' ';
+    clear.innerHTML = "";
 };
 
 function secretButton(e) {
-    alert("If you do not press the 'clear' button, you can select numbers 1, 2, 3, 4, and 5 and have all factz display at the same time!!")
+    alert("Enter 6 and have all factz display at the same time!!")
 }
