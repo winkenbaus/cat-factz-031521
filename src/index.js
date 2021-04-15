@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     click.addEventListener('click', clearFact)
     const secret = document.getElementById("secretButton")
     secret.addEventListener('click', secretButton)
+    const count = document.getElementById("counter")
+    count.addEventListener('click', counterButton, counter)
 });
 
 function catFactz() {
@@ -18,7 +20,9 @@ function catFactz() {
 
 let allFactz 
 function renderFactz(data) {
-    allFactz = data.map(fact => fact.text)
+    allFactz = data.map(fact => {
+        return fact.text
+    })
 };
 
 
@@ -48,4 +52,10 @@ function clearFact(e) {
 
 function secretButton(e) {
     alert("Enter 6 and have all factz display at the same time!!")
+}
+
+let counter = 0
+function counterButton(e, counted){
+    counter++;
+    console.log(`button has been clicked ${counter} times`)
 }
